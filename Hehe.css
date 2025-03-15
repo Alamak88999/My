@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+    background: white;
+    border: 2px solid black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+#qr-input {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#size-select {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#file-name-input {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#generate-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    border: 2px solid black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#generate-btn:hover {
+    background-color: #45a049;
+}
+
+#qr-code {
+    margin-top: 20px;
+}
+
+#download-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#download-btn:hover {
+    background-color: #0056b3;
+}
+
+.notification {
+    position: fixed;
+    top: -120px; /* Awalnya di luar layar */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffff;
+    border: 3px solid black;
+    color: black;
+    padding: 15px 30px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    animation: slideDown 0.5s ease-out forwards, slideUp 1.5s ease-out 2.5s forwards;
+}
+
+@keyframes slideDown {
+    from {
+        top: -100px; /* Mulai dari atas */
+    }
+    to {
+        top: 20px; /* Berhenti di posisi 20px dari atas */
+    }
+}
+
+@keyframes slideUp {
+    from {
+        top: 20px; /* Mulai dari posisi 20px dari atas */
+    }
+    to {
+        top: -120px; /* Kembali ke atas */
+    }
+}
